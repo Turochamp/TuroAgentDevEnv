@@ -24,7 +24,7 @@ winget install -e -h --id Microsoft.PowerToys # settings to sync
 # winget install -e -h --id Dell.DisplayManager
 winget install -e -h --id Amazon.Kindle
 choco install jbs
-choco install notepadplusplus -y
+winget install -e -h --id Notepad++.Notepad++
 
 # ---------------------------------------------- #
 # Dev tools  ----------------------------------- #
