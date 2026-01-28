@@ -9,6 +9,9 @@ This repository contains:
 - App installs via winget and Chocolatey
 - Configuration files for common dev tools and IDEs
 
+IDE setup is split into Cursor (primary), Claude Code, and optional Visual Studio
+scripts; adjust `scripts-to-run.ps1` as needed.
+
 It is tailored to my workflow. If you want to use it, please fork and adjust.
 
 ## Quick start (public bootstrap)
