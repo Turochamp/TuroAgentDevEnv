@@ -4,7 +4,7 @@
 [CmdletBinding()]
 param(
     [string]$RepoUrl = "https://github.com/Turochamp/TuroAgentDevEnv.git",
-    [string]$InstallDir = (Join-Path $env:USERPROFILE "dotfiles")
+    [string]$InstallDir = (Join-Path $env:USERPROFILE "TuroAgentDevEnv")
 )
 
 function Test-Command {
