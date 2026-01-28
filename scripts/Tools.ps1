@@ -7,24 +7,27 @@ choco install -y googlechrome
 # ---------------------------------------------- #
 # Common tools  --------------------------------- #
 # ---------------------------------------------- #
-choco install -y 7zip
-choco install -y paint.net
+winget install -e -h --id 7zip.7zip --accept-package-agreements --accept-source-agreements
+winget install -e -h --id dotPDNLLC.paint.net -s msstore --accept-package-agreements --accept-source-agreements
 # choco install -y screentogif
-choco install -y zoomit
-winget install -e -h --id WinDirStat.WinDirStat
+winget install -e -h --id Microsoft.Sysinternals.ZoomIt --accept-package-agreements --accept-source-agreements
+winget install -e -h --id WinDirStat.WinDirStat --accept-package-agreements --accept-source-agreements
 # winget install -e -h --id Microsoft.BingWallpaper
 # winget install -e -h --id Obsidian.Obsidian
-# winget install -e -h --id JohnMacFarlane.Pandoc
-winget install -e -h --id Microsoft.Whiteboard -s msstore
-winget install -e -h --id Microsoft.PowerToys # settings to sync
+winget install -e -h --id JohnMacFarlane.Pandoc
+winget install -e -h --id Microsoft.Whiteboard -s msstore --accept-package-agreements --accept-source-agreements
+winget install -e -h --id Microsoft.PowerToys --accept-package-agreements --accept-source-agreements # settings to sync
 # Already  installed by default
 # winget install -e -h --id Microsoft.Teams
 # winget install -e -h --id Microsoft.Office
 # winget install -e -h --id Logitech.Options
 # winget install -e -h --id Dell.DisplayManager
-winget install -e -h --id Amazon.Kindle
-choco install jbs
-winget install -h -h --id=Microsoft.Sysinternals.Suite
+winget install -e -h --id Amazon.Kindle --accept-package-agreements --accept-source-agreements
+winget install -e -h --id JetBrains.Toolbox --accept-package-agreements --accept-source-agreements
+winget install -e -h --id Microsoft.Sysinternals.Suite --accept-package-agreements --accept-source-agreements
+
+# Optional: upgrade all installed winget packages
+# winget upgrade --all --accept-package-agreements --accept-source-agreements
 
 # ---------------------------------------------- #
 # Dev tools  ----------------------------------- #
@@ -33,10 +36,13 @@ winget install -h -h --id=Microsoft.Sysinternals.Suite
 #winget install -e -h --id CoreyButler.NVMforWindows
 #iwr https://get.pnpm.io/install.ps1 -useb | iex
 # iwr -useb get.scoop.sh | iex
-winget install -e -h --id GitHub.cli
-winget install -e -h --id Notepad++.Notepad++
-winget install -e -h --id WinMerge.WinMerge
-winget install -e -h --id Docker.DockerDesktop
+winget install -e -h --id GitHub.cli --accept-package-agreements --accept-source-agreements
+winget install -e -h --id Notepad++.Notepad++ --accept-package-agreements --accept-source-agreements
+winget install -e -h --id WinMerge.WinMerge --accept-package-agreements --accept-source-agreements
+winget install -e -h --id Docker.DockerDesktop --accept-package-agreements --accept-source-agreements
+winget install -e -h --id Microsoft.VisualStudioCode --accept-package-agreements --accept-source-agreements
+winget install -e -h --id Git.Git --accept-package-agreements --accept-source-agreements
+winget install -e -h --id OpenJS.NodeJS.LTS --accept-package-agreements --accept-source-agreements
 
 # ---------------------------------------------- #
 # Prompt  -------------------------------------- #
@@ -47,9 +53,9 @@ winget install -e -h --id Docker.DockerDesktop
 # ---------------------------------------------- #
 # PowerShell  ---------------------------------- #
 # ---------------------------------------------- #
-winget install -e -h --id Microsoft.PowerShell
+winget install -e -h --id Microsoft.PowerShell --accept-package-agreements --accept-source-agreements
 # Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-Remove-Item -Path "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" -Force
+Remove-Item -Path "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" -Force -ErrorAction SilentlyContinue
 New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" -Target "$env:USERPROFILE\dotfiles\config\powerShell\Microsoft.PowerShell_profile.ps1"
 
 # ---------------------------------------------- #
@@ -66,8 +72,8 @@ New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\Documents\PowerShell\Mic
 # Windows Terminal ----------------------------- #
 # ---------------------------------------------- #
 # Windows Terminal (stable + preview) install with Cascadia Code PL font
-winget install -e -h --id Microsoft.WindowsTerminal -s msstore
-winget install -e -h --id Microsoft.WindowsTerminalPreview -s msstore
+winget install -e -h --id Microsoft.WindowsTerminal -s msstore --accept-package-agreements --accept-source-agreements
+# winget install -e -h --id Microsoft.WindowsTerminalPreview -s msstore --accept-package-agreements --accept-source-agreements
 # choco install -y cascadiacodepl
 # Windows terminal configuration
 # Remove-Item -Path "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Force
