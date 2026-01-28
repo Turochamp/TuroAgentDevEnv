@@ -24,7 +24,7 @@ winget install -e -h --id Microsoft.PowerToys # settings to sync
 # winget install -e -h --id Dell.DisplayManager
 winget install -e -h --id Amazon.Kindle
 choco install jbs
-winget install -e -h --id Notepad++.Notepad++
+winget install -h -h --id=Microsoft.Sysinternals.Suite
 
 # ---------------------------------------------- #
 # Dev tools  ----------------------------------- #
@@ -33,9 +33,10 @@ winget install -e -h --id Notepad++.Notepad++
 #winget install -e -h --id CoreyButler.NVMforWindows
 #iwr https://get.pnpm.io/install.ps1 -useb | iex
 # iwr -useb get.scoop.sh | iex
-#winget install -e -h --id GitHub.cli
-
-choco install -y docker-desktop
+winget install -e -h --id GitHub.cli
+winget install -e -h --id Notepad++.Notepad++
+winget install -e -h --id WinMerge.WinMerge
+winget install -e -h --id Docker.DockerDesktop
 
 # ---------------------------------------------- #
 # Prompt  -------------------------------------- #
@@ -54,28 +55,28 @@ New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\Documents\PowerShell\Mic
 # ---------------------------------------------- #
 # NuShell  ---------------------------------- #
 # ---------------------------------------------- #
-#winget install -e -h --id Nushell.Nushell
+# winget install -e -h --id Nushell.Nushell
 # saves an initialization script to ~/.oh-my-posh.nu that will be used in Nushell config file
-#oh-my-posh init nu --config "$env:USERPROFILE\dotfiles\config\prompt\.oh-my-posh.omp.json"
-#Remove-Item -Path "$env:USERPROFILE\AppData\Roaming\nushell\config.nu" -Force
-#New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\AppData\Roaming\nushell\config.nu" -Target "$env:USERPROFILE\dotfiles\config\nu\config.nu"
+# oh-my-posh init nu --config "$env:USERPROFILE\dotfiles\config\prompt\.oh-my-posh.omp.json"
+# Remove-Item -Path "$env:USERPROFILE\AppData\Roaming\nushell\config.nu" -Force
+# New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\AppData\Roaming\nushell\config.nu" -Target "$env:USERPROFILE\dotfiles\config\nu\config.nu"
 # config auto complete dotnet / nuke / ...
 
 # ---------------------------------------------- #
 # Windows Terminal ----------------------------- #
 # ---------------------------------------------- #
 # Windows Terminal (stable + preview) install with Cascadia Code PL font
-#winget install -e -h --id Microsoft.WindowsTerminal -s msstore
-#winget install -e -h --id Microsoft.WindowsTerminalPreview -s msstore
-#choco install -y cascadiacodepl
+winget install -e -h --id Microsoft.WindowsTerminal -s msstore
+winget install -e -h --id Microsoft.WindowsTerminalPreview -s msstore
+# choco install -y cascadiacodepl
 # Windows terminal configuration
-#Remove-Item -Path "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Force
-#New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Target "$env:USERPROFILE\dotfiles\config\windowsTerminal\settings.json"
-#cp "$env:USERPROFILE\dotfiles\config\windowsTerminal\icons\*" "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState\"
+# Remove-Item -Path "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Force
+# New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Target "$env:USERPROFILE\dotfiles\config\windowsTerminal\settings.json"
+# cp "$env:USERPROFILE\dotfiles\config\windowsTerminal\icons\*" "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState\"
 # Windows terminal preview configuration
-#Remove-Item -Path "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json" -Force
-#New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json" -Target "$env:USERPROFILE\dotfiles\config\windowsTerminal\settings.json"
-#cp "$env:USERPROFILE\dotfiles\config\windowsTerminal\icons\*" "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\RoamingState\"
+# Remove-Item -Path "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json" -Force
+# New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json" -Target "$env:USERPROFILE\dotfiles\config\windowsTerminal\settings.json"
+# cp "$env:USERPROFILE\dotfiles\config\windowsTerminal\icons\*" "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\RoamingState\"
 
 
 # ---------------------------------------------- #
