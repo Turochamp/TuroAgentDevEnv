@@ -11,45 +11,65 @@ Write-Host "Uninstall some applications that come with Windows out of the box" -
 function removeApp {
 	Param ([string]$appName)
 	Write-Output "Trying to remove $appName"
-	Get-AppxPackage $appName -AllUsers | Remove-AppxPackage
-	Get-AppXProvisionedPackage -Online | Where DisplayName -like $appName | Remove-AppxProvisionedPackage -Online
+	Get-AppxPackage -AllUsers -Name $appName -ErrorAction SilentlyContinue | Remove-AppxPackage -ErrorAction SilentlyContinue
+	Get-AppXProvisionedPackage -Online | Where-Object { $_.DisplayName -like $appName } | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue
 }
 
 $applicationList = @(
-	"Microsoft.BingFinance"
-	"Microsoft.3DBuilder"
-	"Microsoft.BingFinance"
+	# Windows 11+ consumer apps
+	"Clipchamp.Clipchamp"
 	"Microsoft.BingNews"
-	"Microsoft.BingSports"
 	"Microsoft.BingWeather"
-	"Microsoft.CommsPhone"
-	"Microsoft.Getstarted"
-	"Microsoft.WindowsMaps"
-	"*MarchofEmpires*"
+	"Microsoft.GamingApp"
 	"Microsoft.GetHelp"
+	"Microsoft.Getstarted"
+	"Microsoft.MicrosoftOfficeHub"
+	"Microsoft.MicrosoftSolitaireCollection"
+	"Microsoft.MicrosoftStickyNotes"
+	"Microsoft.OutlookForWindows"
+	"Microsoft.People"
+	"Microsoft.PowerAutomateDesktop"
+	"Microsoft.Todos"
+	"Microsoft.WindowsAlarms"
+	"Microsoft.WindowsCamera"
+	"Microsoft.WindowsCommunicationsApps"
+	"Microsoft.WindowsFeedbackHub"
+	"Microsoft.WindowsMaps"
+	"Microsoft.WindowsSoundRecorder"
+	"Microsoft.YourPhone"
+	"MicrosoftWindows.Client.WebExperience"
+	"MicrosoftTeams"
+	"Microsoft.ZuneMusic"
+	"Microsoft.ZuneVideo"
+
+	# Legacy Windows 10 names (kept for compatibility)
+	"Microsoft.3DBuilder"
+	"Microsoft.BingSports"
+	"Microsoft.CommsPhone"
 	"Microsoft.Messaging"
-	"*Minecraft*"
 	"Microsoft.OneConnect"
 	"Microsoft.WindowsPhone"
-	"Microsoft.WindowsSoundRecorder"
-	"*Solitaire*"
 	"Microsoft.Office.Sway"
 	"Microsoft.XboxApp"
 	"Microsoft.XboxIdentityProvider"
-	"Microsoft.ZuneMusic"
-	"Microsoft.ZuneVideo"
 	"Microsoft.NetworkSpeedTest"
 	"Microsoft.FreshPaint"
 	"Microsoft.Print3D"
+
+	# Third-party bundled apps
 	"*Autodesk*"
 	"*BubbleWitch*"
-    "king.com*"
-    "G5*"
+	"*CandyCrush*"
 	"*Facebook*"
 	"*Keeper*"
+	"*MarchofEmpires*"
+	"*Minecraft*"
 	"*Netflix*"
-	"*Twitter*"
 	"*Plex*"
+	"*Solitaire*"
+	"*Twitter*"
+	"king.com*"
+	"G5*"
 	"*.Duolingo-LearnLanguagesforFree"
 	"*.EclipseManager"
 	"ActiproSoftwareLLC.562882FEEB491" # Code Writer
