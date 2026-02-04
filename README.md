@@ -16,7 +16,7 @@ It is tailored to my workflow. If you want to use it, please fork and adjust.
 
 ## Quick start (public bootstrap)
 
-Run the bootstrap script from PowerShell to install core tools, clone the repo,
+Run the bootstrap script from an **admin** PowerShell to install core tools, clone the repo,
 and open a file where you can comment out scripts you do not want to run:
 
 ```

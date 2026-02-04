@@ -23,7 +23,7 @@ winget install -e -h --id Microsoft.PowerToys --accept-package-agreements --acce
 # winget install -e -h --id Logitech.Options
 # winget install -e -h --id Dell.DisplayManager
 winget install -e -h --id Amazon.Kindle --accept-package-agreements --accept-source-agreements
-winget install -e -h --id JetBrains.Toolbox --accept-package-agreements --accept-source-agreements
+winget install -e -h --id Trello.Trello --accept-package-agreements --accept-source-agreements
 winget install -e -h --id Microsoft.Sysinternals.Suite --accept-package-agreements --accept-source-agreements
 
 # Optional: upgrade all installed winget packages
@@ -40,7 +40,6 @@ winget install -e -h --id GitHub.cli --accept-package-agreements --accept-source
 winget install -e -h --id Notepad++.Notepad++ --accept-package-agreements --accept-source-agreements
 winget install -e -h --id WinMerge.WinMerge --accept-package-agreements --accept-source-agreements
 winget install -e -h --id Docker.DockerDesktop --accept-package-agreements --accept-source-agreements
-winget install -e -h --id Microsoft.VisualStudioCode --accept-package-agreements --accept-source-agreements
 winget install -e -h --id Git.Git --accept-package-agreements --accept-source-agreements
 winget install -e -h --id OpenJS.NodeJS.LTS --accept-package-agreements --accept-source-agreements
 

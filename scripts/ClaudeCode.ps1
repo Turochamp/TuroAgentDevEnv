@@ -1,6 +1,6 @@
 # Claude Code CLI + MCP servers + skills (manual setup)
 # Recommended CLI install (manual):
-# npm install -g @anthropic-ai/claude-code
+irm https://claude.ai/install.ps1 | iex
 
 # VS Code is required for the Claude Code extension and works well with Cursor too
 choco install -y vscode
