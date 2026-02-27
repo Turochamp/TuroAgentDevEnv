@@ -24,6 +24,7 @@ winget install -e -h --id Microsoft.PowerToys --accept-package-agreements --acce
 # winget install -e -h --id Dell.DisplayManager
 winget install -e -h --id Amazon.Kindle --accept-package-agreements --accept-source-agreements
 winget install -e -h --id Trello.Trello --accept-package-agreements --accept-source-agreements
+winget install -e -h --id Telegram.TelegramDesktop --accept-package-agreements --accept-source-agreements
 winget install -e -h --id Microsoft.Sysinternals.Suite --accept-package-agreements --accept-source-agreements
 
 # Optional: upgrade all installed winget packages
