@@ -24,7 +24,7 @@ winget install -e -h --id Microsoft.PowerToys --accept-package-agreements --acce
 # winget install -e -h --id Dell.DisplayManager
 winget install -e -h --id Amazon.Kindle --accept-package-agreements --accept-source-agreements
 choco install -y calibre
-winget install -e -h --id Trello.Trello --accept-package-agreements --accept-source-agreements
+winget install 9NBLGGH4XXVW --accept-package-agreements --accept-source-agreements
 winget install -e -h --id Telegram.TelegramDesktop --accept-package-agreements --accept-source-agreements
 winget install -e -h --id Microsoft.Sysinternals.Suite --accept-package-agreements --accept-source-agreements
 
@@ -44,6 +44,7 @@ winget install -e -h --id WinMerge.WinMerge --accept-package-agreements --accept
 winget install -e -h --id Docker.DockerDesktop --accept-package-agreements --accept-source-agreements
 winget install -e -h --id Git.Git --accept-package-agreements --accept-source-agreements
 winget install -e -h --id OpenJS.NodeJS.LTS --accept-package-agreements --accept-source-agreements
+winget install -e -h --id Google.WorkspaceCLI --accept-package-agreements --accept-source-agreements
 
 # ---------------------------------------------- #
 # Prompt  -------------------------------------- #
