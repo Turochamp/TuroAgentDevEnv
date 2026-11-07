@@ -1,0 +1,7 @@
+[
+  { "ssid": "HomeNet", "secret": "WIFI_HOMENET" },
+  { "ssid": "OfficeNet", "secret": "WIFI_OFFICENET" },
+  { "ssid": "Library Guest", "secret": "WIFI_LIBRARY_GUEST" },
+  { "ssid": "My Phone AP", "secret": "WIFI_MY_PHONE_AP", "hotspot": true },
+  { "ssid": "Old Phone AP", "retired": true }
+]

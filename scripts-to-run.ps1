@@ -10,3 +10,4 @@
 . "$PSScriptRoot\scripts\Azure.ps1"
 # . "$PSScriptRoot\scripts\DataEngineering.ps1"
 # . "$PSScriptRoot\scripts\Office.ps1"
+# . "$PSScriptRoot\scripts\WiFi.ps1"
