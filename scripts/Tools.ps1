@@ -47,6 +47,8 @@ winget install -e -h --id Git.Git --accept-package-agreements --accept-source-ag
 winget install -e -h --id OpenJS.NodeJS.LTS --accept-package-agreements --accept-source-agreements
 winget install -e -h --id Google.WorkspaceCLI --accept-package-agreements --accept-source-agreements
 winget install -e -h --id OpenAI.Codex --accept-package-agreements --accept-source-agreements
+# winget reports a "codex" alias but creates none; the exe is codex-x86_64-pc-windows-msvc.exe. Shim it.
+Set-Content -Path "$env:LOCALAPPDATA\Microsoft\WinGet\Links\codex.cmd" -Encoding ascii -Value '@"%LOCALAPPDATA%\Microsoft\WinGet\Packages\OpenAI.Codex_Microsoft.Winget.Source_8wekyb3d8bbwe\codex-x86_64-pc-windows-msvc.exe" %*'
 
 # ---------------------------------------------- #
 # Prompt  -------------------------------------- #
