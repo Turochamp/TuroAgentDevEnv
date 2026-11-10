@@ -26,6 +26,7 @@ winget install -e -h --id Amazon.Kindle --accept-package-agreements --accept-sou
 choco install -y calibre
 winget install 9NBLGGH4XXVW --accept-package-agreements --accept-source-agreements
 winget install -e -h --id Telegram.TelegramDesktop --accept-package-agreements --accept-source-agreements
+winget install -e -h --id OpenWhisperSystems.Signal --accept-package-agreements --accept-source-agreements
 winget install -e -h --id Microsoft.Sysinternals.Suite --accept-package-agreements --accept-source-agreements
 
 # Optional: upgrade all installed winget packages
