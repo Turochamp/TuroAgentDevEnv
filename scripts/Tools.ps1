@@ -46,6 +46,7 @@ winget install -e -h --id Docker.DockerDesktop --accept-package-agreements --acc
 winget install -e -h --id Git.Git --accept-package-agreements --accept-source-agreements
 winget install -e -h --id OpenJS.NodeJS.LTS --accept-package-agreements --accept-source-agreements
 winget install -e -h --id Google.WorkspaceCLI --accept-package-agreements --accept-source-agreements
+winget install -e -h --id OpenAI.Codex --accept-package-agreements --accept-source-agreements
 
 # ---------------------------------------------- #
 # Prompt  -------------------------------------- #
